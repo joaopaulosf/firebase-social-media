@@ -1,0 +1,31 @@
+.navigation-bar {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  font-size: 1.5rem;
+  height: 38px;
+  margin-bottom: 50px;
+  background-color: #101010;
+}
+
+.navigation-bar .links {
+  display: flex;
+  gap: 40px;
+}
+
+.navigation-bar .links > .link {
+  text-decoration: none;
+  color: #fff;
+}
+
+.navigation-bar .user-data {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 20px;
+}
+
+.navigation-bar .user-data > img {
+  width: 30px;
+  border-radius: 99px;
+}

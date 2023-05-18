@@ -1,0 +1,18 @@
+.login-page {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1000px;
+  margin: auto;
+  gap: 12px;
+}
+
+.login-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.login-page .login-button > img {
+  width: 20px;
+}
