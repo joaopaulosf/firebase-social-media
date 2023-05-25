@@ -4,15 +4,5 @@
   align-items: center;
   max-width: 1000px;
   margin: auto;
-  gap: 12px;
-}
-
-.login-button {
-  display: flex;
-  align-items: center;
-  justify-content: space-around;
-}
-
-.login-page .login-button > img {
-  width: 20px;
+  gap: 20px;
 }

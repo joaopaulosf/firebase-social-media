@@ -1,6 +1,66 @@
 .home-page {
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  align-items: center;
   max-width: 1000px;
-  margin: auto;
+  margin: 60px auto;
+  gap: 60px;
+}
+
+.post-content {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: var(--gona-try-now);
+  backdrop-filter: blur(5px);
+  box-shadow: 0px 0px 20px 5px var(--sun-nigth);
+  padding: 20px;
+  border-radius: 3px;
+}
+
+.post-content .post-title {
+  font-size: var(--big-size);
+}
+
+.post-content .post-description {
+  font-size: var(--small-size);
+  margin: 20px 0;
+}
+
+.post-content .post-user {
+  text-align: end;
+}
+
+.post-content .post-created {
+  display: flex;
+  justify-content: space-between;
+  align-items: end;
+}
+
+.post-content .likes-section {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.post-created .like-btn {
+  padding: 0;
+  height: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: transparent;
+  border: none;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 60px;
+  border-radius: 3px;
+}
+
+.back-to-top button {
+  padding: 5px;
 }
