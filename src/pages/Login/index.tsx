@@ -1,4 +1,4 @@
-import { auth, gitProvider, googleProvider } from "../../config/firebase";
+import { auth, gitProvider, googleProvider } from "../../config/auth";
 import { signInWithPopup } from "firebase/auth";
 import { useNavigate } from "react-router-dom";
 import "./styles.css";

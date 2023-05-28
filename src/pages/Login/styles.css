@@ -6,3 +6,7 @@
   margin: auto;
   gap: 20px;
 }
+
+.login-page .login-button {
+  font-size: var(--small-size);
+}

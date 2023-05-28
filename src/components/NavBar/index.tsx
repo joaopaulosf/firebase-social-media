@@ -1,30 +1,13 @@
-import { Link, useNavigate } from "react-router-dom";
-import { auth } from "../../config/firebase";
+import { Link } from "react-router-dom";
+import { auth } from "../../config/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
-import { signOut } from "firebase/auth";
+import { SignOutButton } from "../SignOut";
+import { useScroll } from "../../hooks/useScroll";
 import "./styles.css";
-import { useState } from "react";
 
 export const Navbar = () => {
-  const [nav, setNav] = useState(false);
-  const navigate = useNavigate();
-
-  const changeBackground = () => {
-    if (window.scrollY >= 80) {
-      setNav(true);
-    } else {
-      setNav(false);
-    }
-  };
-
-  window.addEventListener("scroll", changeBackground);
-
+  const nav = useScroll();
   const [user] = useAuthState(auth);
-
-  const signOutUser = async () => {
-    await signOut(auth);
-    navigate("/login");
-  };
 
   return (
     <nav className={nav ? "navigation-bar active" : "navigation-bar"}>
@@ -42,13 +25,12 @@ export const Navbar = () => {
           </Link>
         )}
       </div>
-
       <div className="user-data">
         {user && (
           <>
             <p>{user?.displayName}</p>
             <img src={user?.photoURL || ""} alt="" />
-            <button onClick={signOutUser}>Log out</button>
+            <SignOutButton />
           </>
         )}
       </div>

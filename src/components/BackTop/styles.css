@@ -1,0 +1,10 @@
+.back-to-top {
+  position: fixed;
+  bottom: 40px;
+  right: 60px;
+  border-radius: 3px;
+}
+
+.back-to-top button {
+  padding: 5px;
+}

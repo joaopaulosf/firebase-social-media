@@ -13,7 +13,6 @@ body {
 }
 
 button {
-  font-family: "Poppins", sans-serif;
   background-color: var(--wuw-corsa);
   color: #fff;
   border: 1px solid #101010;

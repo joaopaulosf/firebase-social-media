@@ -78,7 +78,10 @@ summary,
 time,
 mark,
 audio,
-video {
+video,
+button,
+input,
+textarea {
   margin: 0;
   padding: 0;
   border: 0;
