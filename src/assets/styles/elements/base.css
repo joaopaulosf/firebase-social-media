@@ -12,17 +12,6 @@ body {
   background-attachment: fixed;
 }
 
-body::after {
-  content: "";
-  top: 0;
-  width: 100%;
-  height: 100%;
-  position: fixed;
-  background: url("../../images/grain.jpg");
-  background-size: cover;
-  mix-blend-mode: multiply;
-}
-
 button {
   background-color: var(--wuw-corsa);
   color: #fff;
