@@ -3,6 +3,7 @@
   bottom: 40px;
   right: 60px;
   border-radius: 3px;
+  z-index: 1;
 }
 
 .back-to-top button {

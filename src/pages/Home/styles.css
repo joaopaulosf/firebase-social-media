@@ -17,6 +17,7 @@
   box-shadow: 0px 0px 20px 5px var(--sun-nigth);
   padding: 20px;
   border-radius: 3px;
+  z-index: 1;
 }
 
 .post-content .post-title {

@@ -9,4 +9,5 @@
 
 .login-page .login-button {
   font-size: var(--small-size);
+  z-index: 1;
 }

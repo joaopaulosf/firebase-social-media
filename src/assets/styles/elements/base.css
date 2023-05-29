@@ -7,9 +7,20 @@ body {
   font-size: 10px;
   color: var(--dont-know);
   height: 100%;
-  background: linear-gradient(to bottom right, #111, #222);
+  background: linear-gradient(to top right, #111, #222);
   background-size: 100%;
   background-attachment: fixed;
+}
+
+body::after {
+  content: "";
+  top: 0;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  background: url("../../images/grain.jpg");
+  background-size: cover;
+  mix-blend-mode: multiply;
 }
 
 button {
@@ -24,5 +35,5 @@ button {
 }
 
 button:hover {
-  border: 1px solid #03e8f460;
+  border: 1px solid var(--btn-ntb);
 }
