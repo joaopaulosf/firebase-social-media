@@ -1,11 +1,11 @@
-import heart from "../../assets/svg/heart.svg";
-import heartfill from "../../assets/svg/heart-fill.svg";
-import { Props } from "../../config/interfaces";
-import { useLikes } from "../../hooks/useLikes";
+import heart from "../../../assets/svg/heart.svg";
+import heartfill from "../../../assets/svg/heart-fill.svg";
+import { Props } from "../../../config/interfaces";
+import { useLikes } from "../../../hooks/useLikes";
+import "./styles.css";
 
-export const Post = (props: Props) => {
-  const [likes, addLike, removeLike, hasLiked] = useLikes(props);
-  const { post } = props;
+export const Post = ({ post }: Props) => {
+  const { likes, addLike, removeLike, hasLiked } = useLikes({ post });
 
   const getDate = () => {
     const date = post.timestamp.toDate().toString();

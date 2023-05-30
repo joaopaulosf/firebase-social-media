@@ -1,20 +1,16 @@
 import { yupResolver } from "@hookform/resolvers/yup";
 import { useForm } from "react-hook-form";
-import * as yup from "yup";
 import { addDoc, collection } from "firebase/firestore";
-import { auth, db } from "../../config/auth";
+import { auth, db } from "../../../config/auth";
 import { useAuthState } from "react-firebase-hooks/auth";
 import { useNavigate } from "react-router-dom";
-import { FormData } from "../../config/interfaces";
+import { FormData } from "../../../config/interfaces";
+import { schema } from "../utils";
+import "./styles.css";
 
 export const CreateForm = () => {
   const [user] = useAuthState(auth);
   const navigate = useNavigate();
-
-  const schema = yup.object().shape({
-    title: yup.string().required("You must add a title."),
-    description: yup.string().required("You must add a description."),
-  });
 
   const {
     register,

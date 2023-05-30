@@ -1,3 +1,5 @@
+import { MouseEventHandler } from "react";
+
 export interface Post {
   id: string;
   userId: string;
@@ -20,3 +22,10 @@ export interface FormData {
   title: string;
   description: string;
 }
+
+export type LikesReturn = {
+  likes: Like[] | null;
+  addLike: MouseEventHandler;
+  removeLike: MouseEventHandler;
+  hasLiked: Like | undefined;
+};

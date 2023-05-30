@@ -1,5 +1,5 @@
 import "./styles.css";
-import { CreateForm } from "./CreateForm";
+import { CreateForm } from "./components/CreateForm";
 
 export const NewPost = () => {
   return (

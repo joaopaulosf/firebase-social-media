@@ -1,5 +1,5 @@
 import "./styles.css";
-import { Post } from "./post";
+import { Post } from "./components/post";
 import { usePosts } from "../../hooks/usePosts";
 import { BackToTop } from "../../components/BackTop";
 

@@ -8,13 +8,12 @@ import {
   where,
 } from "firebase/firestore";
 import { auth, db } from "../../config/auth";
-import { Like, Props } from "../../config/interfaces";
+import { LikesReturn, Like, Props } from "../../config/interfaces";
 import { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 
-export const useLikes = (props: Props) => {
+export const useLikes = ({ post }: Props): LikesReturn => {
   const [likes, setLikes] = useState<Like[] | null>(null);
-  const { post } = props;
   const [user] = useAuthState(auth);
   const likesRef = collection(db, "likes");
 
@@ -77,5 +76,5 @@ export const useLikes = (props: Props) => {
     getLikes();
   }, []);
 
-  return [likes, addLike, removeLike, hasLiked];
+  return { likes, addLike, removeLike, hasLiked };
 };
