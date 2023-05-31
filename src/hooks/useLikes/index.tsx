@@ -8,7 +8,7 @@ import {
   where,
 } from "firebase/firestore";
 import { auth, db } from "../../config/auth";
-import { LikesReturn, Like, Props } from "../../config/interfaces";
+import { LikesReturn, Like, Props } from "../../config/modules";
 import { useEffect, useState } from "react";
 import { useAuthState } from "react-firebase-hooks/auth";
 

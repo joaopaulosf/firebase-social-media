@@ -23,9 +23,9 @@ export interface FormData {
   description: string;
 }
 
-export type LikesReturn = {
+export interface LikesReturn {
   likes: Like[] | null;
   addLike: MouseEventHandler;
   removeLike: MouseEventHandler;
   hasLiked: Like | undefined;
-};
+}

@@ -1,6 +1,6 @@
 import { collection, getDocs, orderBy, query } from "firebase/firestore";
 import { db } from "../../config/auth";
-import { Post } from "../../config/interfaces/index";
+import { Post } from "../../config/modules";
 import { useEffect, useState } from "react";
 
 export const usePosts = () => {
